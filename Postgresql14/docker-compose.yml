@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:14-alpine
+    ports:
+      - 5432:5432
+    volumes:
+    - ./db-data-card-virtual:/var/lib/postgresql/data
+    - TZ=Asia/Bangkok
+     POSTGRES_USER: testcardvirtual
+      POSTGRES_PASSWORD: P@ssw0rdtestcardvirtual
+      POSTGRES_DB: testcardvirtual
+      TZ: Asia/Bangkok
+    ports:
+    - "5432:5432"
+    networks:
+    - test_network-db
+    
+    networks:
+  test_network-db:
+    driver: bridge
