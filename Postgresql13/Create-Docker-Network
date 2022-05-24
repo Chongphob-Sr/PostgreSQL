@@ -1,1 +1,4 @@
 docker network create --driver bridge  test_network-db
+
+
+docker network ls # check docker network
