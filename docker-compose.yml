@@ -6,7 +6,7 @@ services:
     environment:
       POSTGRES_USER: testtoken
       POSTGRES_PASSWORD: P@ssw0rdtesttoken
-      POSTGRES_DB: gbtoken
+      POSTGRES_DB: testtoken
       TZ: Asia/Bangkok
     ports:
     - "5432:5432"
