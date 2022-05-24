@@ -1,0 +1,3 @@
+docker-compose logs postgresql
+
+docker logs postgresql
