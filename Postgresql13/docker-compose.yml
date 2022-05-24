@@ -1,0 +1,21 @@
+version: "3"
+services:
+  test-card-virtual-db:
+    image: postgres:13.6
+    mem_limit: 1536MB
+    environment:
+      POSTGRES_USER: testcardvirtual
+      POSTGRES_PASSWORD: P@ssw0rdtestcardvirtual
+      POSTGRES_DB: testcardvirtual
+      TZ: Asia/Bangkok
+    ports:
+    - "5435:5432"
+    networks:
+    - test_network-db
+    volumes:
+    - ./db-data-card-virtual:/var/lib/postgresql/data
+    - TZ=Asia/Bangkok
+
+networks:
+  test_network-db:
+    driver: bridge
